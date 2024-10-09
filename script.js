@@ -31,15 +31,13 @@ const startGame = () => {
     rollDice();
 };
 
-
 // Função para rolar o dado
 const rollDice = () => {
     if (isRolling) return;
 
     if (remainingFaces.length === 0) {
-        alert("Todas as faces foram sorteadas! O jogo será resetado.");
-        resetGame(); // Chama a função resetGame para voltar à tela inicial
-        return;
+        // Repopula as faces quando todas forem sorteadas
+        remainingFaces = [...faces];
     }
 
     isRolling = true;
@@ -59,18 +57,6 @@ const rollDice = () => {
         isRolling = false;
         rollButton.disabled = false;
     }, 500); // Ajusta o tempo para sincronizar com a rotação do dado
-};
-
-// Função para resetar o jogo e voltar à tela inicial
-const resetGame = () => {
-    remainingFaces = [...faces];
-    dice.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    description.innerHTML = '<p>Clique no botão "Rolar o Dado" para ver a descrição do tema selecionado.</p>';
-
-    // Esconde o dado e botão de rolar, mostra a tela inicial
-    diceContainer.style.display = 'none';
-    rollButton.style.display = 'none';
-    initialScreen.style.display = 'block';
 };
 
 // Adiciona event listeners
