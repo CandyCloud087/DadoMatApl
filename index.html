@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado de Matemática Aplicada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="initial-screen" id="initialScreen" aria-labelledby="welcomeTitle">
+        <h1 id="welcomeTitle">Bem-vindo ao Dado de Matemática Aplicada!</h1>
+        <p>Clique no botão abaixo para iniciar o jogo e rolar o dado.</p>
+        <button id="startButton" aria-label="Iniciar o jogo e rolar o dado">Iniciar Jogo</button>
+    </section>
+    
+    <section class="dice-container" id="diceContainer" aria-hidden="true" style="display: none;">
+        <div class="dice" id="dice" role="img" aria-label="Dado de Matemática Aplicada">
+            <div class="face face1">Estatística</div>
+            <div class="face face2">Cálculo</div>
+            <div class="face face3">Álgebra Linear</div>
+            <div class="face face4">Teoria dos Números</div>
+            <div class="face face5">Geometria</div>
+            <div class="face face6">Análise Numérica</div>
+        </div>
+    </section>
+    
+    <button id="rollButton" aria-label="Rolar o dado" style="display: none;">Rolar o Dado</button>
+    
+    <section class="description" id="description" role="region" aria-live="polite">
+        <p>Clique no botão "Rolar o Dado" para ver a descrição do tema selecionado.</p>
+    </section>          
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Reset básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+/* Oculta os elementos que devem ser exibidos depois */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.initial-screen, .description {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.initial-screen h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.initial-screen p, .description p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.dice-container {
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.dice {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+/* Definições das faces do dado */
+.face1 { transform: rotateY(0deg) translateZ(75px); }
+.face2 { transform: rotateY(90deg) translateZ(75px); }
+.face3 { transform: rotateY(180deg) translateZ(75px); }
+.face4 { transform: rotateY(-90deg) translateZ(75px); }
+.face5 { transform: rotateX(90deg) translateZ(75px); }
+.face6 { transform: rotateX(-90deg) translateZ(75px); }
+
+button {
+    padding: 12px 24px;
+    margin: 25px 0 20px 0;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 600px) {
+    .dice {
+        width: 150px;
+        height: 150px;
+    }
+
+    .face {
+        width: 150px;
+        height: 150px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
