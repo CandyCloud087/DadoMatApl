@@ -1,4 +1,6 @@
 /* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
     padding: 20px;
 }
 
@@ -53,6 +55,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Dado com estilo */
 .dice {
     width: 150px;
     height: 150px;
@@ -62,21 +65,28 @@ body {
     transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Cores diferentes para cada face do dado */
 .face {
     position: absolute;
     width: 150px;
     height: 150px;
-    background-color: #fff;
-    border: 2px solid #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     backface-visibility: hidden;
+}
+
+/* Adicionando borda e sombra mais pronunciada */
+.face {
+    border: 2px solid #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #1dc0d3;
+    color: #ffff;
 }
 
 /* Definições das faces do dado */
@@ -120,7 +130,8 @@ button:disabled {
     .face {
         width: 150px;
         height: 150px;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+        font-weight: 600;
     }
 
     button {

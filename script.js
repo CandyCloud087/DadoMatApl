@@ -1,11 +1,11 @@
 // Dados das faces do dado
 const faces = [
-    { x: 0, y: 0, name: "Estatística", description: "Estatística: Estudo de dados e probabilidades. Envolve a coleta, análise, interpretação e apresentação de grandes volumes de dados para descobrir padrões e tendências." },
-    { x: 0, y: 90, name: "Teoria dos Números", description: "Teoria dos Números: Propriedades dos números inteiros. Explora conceitos como primalidade, divisibilidade e a distribuição dos números primos." },
-    { x: 0, y: 180, name: "Álgebra Linear", description: "Álgebra Linear: Estudo de vetores, matrizes e espaços vetoriais. Essencial para resolver sistemas lineares e amplamente utilizada em computação, física e engenharia." },
-    { x: 0, y: -90, name: "Cálculo", description: "Cálculo: Análise de taxas de variação e acumulação. É fundamental para entender fenômenos contínuos em física, engenharia, economia e outras áreas." },
-    { x: 90, y: 0, name: "Análise Numérica", description: "Análise Numérica: Métodos para resolver problemas matemáticos de forma aproximada. Utiliza algoritmos para computação de soluções numéricas em engenharia, física e outras ciências." },
-    { x: -90, y: 0, name: "Geometria", description: "Geometria: Estudo de formas, tamanhos e propriedades do espaço. Abrange desde geometria euclidiana até tópicos avançados como topologia e geometria diferencial." }
+    { x: 0, y: 0, name: "Média Aritmética", description: "A média aritmética é a soma de um conjunto de números dividida pela quantidade de números. É usada para encontrar o valor médio de um grupo de dados. Por exemplo, para as notas 8, 7 e 9, a média aritmética é (8 + 7 + 9) / 3 = 8." },
+    { x: 0, y: 90, name: "Payback", description: "O payback é um indicador financeiro que mede o tempo necessário para recuperar o investimento inicial em um projeto. Em outras palavras, ele calcula quanto tempo levará para que o lucro acumulado iguale o valor investido. Por exemplo, se você investe R$ 50.000 em um negócio e espera recuperar esse valor em 10 meses, o payback é de 10 meses." },
+    { x: 0, y: 180, name: "Juros compostos", description: "Os juros compostos são uma forma de calcular juros onde os juros acumulados são adicionados ao capital inicial, e os juros futuros são calculados sobre esse novo valor. Isso resulta em um crescimento exponencial do montante ao longo do tempo." },
+    { x: 0, y: -90, name: "Fluxos de caixa", description: "O fluxo de caixa registra todas as entradas e saídas de dinheiro de uma empresa em um período específico. Ele é essencial para monitorar a liquidez e a saúde financeira do negócio." },
+    { x: 90, y: 0, name: "Tir", description: "A TIR (Taxa Interna de Retorno) é uma métrica financeira que indica a taxa de retorno de um investimento, considerando o valor presente dos fluxos de caixa futuros. Ela é usada para avaliar a viabilidade e a rentabilidade de projetos." },
+    { x: -90, y: 0, name: "Excel", description: "O Excel é crucial na administração por sua capacidade de organizar e analisar dados, automatizar processos, criar relatórios e gráficos, e auxiliar no planejamento financeiro. Ele aumenta a eficiência e precisão nas operações empresariais." }
 ];
 
 let remainingFaces = [...faces];
