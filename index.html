@@ -15,20 +15,21 @@
     
     <section class="dice-container" id="diceContainer" aria-hidden="true" style="display: none;">
         <div class="dice" id="dice" role="img" aria-label="Dado de Matemática Aplicada">
-            <div class="face face1">Média Aritmética</div>
-            <div class="face face2">Payback</div>
-            <div class="face face3">Juros compostos</div>
-            <div class="face face4">Fluxos de caixa</div>
-            <div class="face face5">Tir</div>
-            <div class="face face6">Excel</div>
+            <div class="face" id="face1">1</div>
+            <div class="face" id="face2">2</div>
+            <div class="face" id="face3">3</div>
+            <div class="face" id="face4">4</div>
+            <div class="face" id="face5">5</div>
+            <div class="face" id="face6">?</div>
         </div>
-    </section>
+    </section>    
     
-    <button id="rollButton" aria-label="Rolar o dado" style="display: none;">Rolar o Dado</button>
+    <button id="rollButton" aria-label="Rolar o dado" style="display: none;">Próxima Face</button>
     
     <section class="description" id="description" role="region" aria-live="polite">
-        <p>Clique no botão "Rolar o Dado" para ver a descrição do tema selecionado.</p>
-    </section>          
+        <div id="nameDisplay"><h2>Nome do Tema</h2></div>
+        <p>Clique no botão "Próxima Face" para ver a descrição do próximo tema.</p>
+    </section>             
 
     <script src="script.js"></script>
 </body>

@@ -55,7 +55,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Dado com estilo */
 .dice {
     width: 150px;
     height: 150px;
@@ -65,7 +64,6 @@ body {
     transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Cores diferentes para cada face do dado */
 .face {
     position: absolute;
     width: 150px;
@@ -79,7 +77,19 @@ body {
     padding: 10px;
     border-radius: 10px;
     backface-visibility: hidden;
+    border: 2px solid #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #1dc0d3;
+    color: #ffffff;
 }
+
+/* Definições das faces do dado */
+#face1 { transform: rotateY(0deg) translateZ(75px); }
+#face2 { transform: rotateY(90deg) translateZ(75px); }
+#face3 { transform: rotateY(180deg) translateZ(75px); }
+#face4 { transform: rotateY(-90deg) translateZ(75px); }
+#face5 { transform: rotateX(90deg) translateZ(75px); }
+#face6 { transform: rotateX(-90deg) translateZ(75px); }
 
 /* Adicionando borda e sombra mais pronunciada */
 .face {
@@ -88,14 +98,6 @@ body {
     background-color: #1dc0d3;
     color: #ffff;
 }
-
-/* Definições das faces do dado */
-.face1 { transform: rotateY(0deg) translateZ(75px); }
-.face2 { transform: rotateY(90deg) translateZ(75px); }
-.face3 { transform: rotateY(180deg) translateZ(75px); }
-.face4 { transform: rotateY(-90deg) translateZ(75px); }
-.face5 { transform: rotateX(90deg) translateZ(75px); }
-.face6 { transform: rotateX(-90deg) translateZ(75px); }
 
 button {
     padding: 12px 24px;
